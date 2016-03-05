@@ -1,18 +1,34 @@
+    click=0;
+    
+    function changeclass()
+    {
+        document.getElementById("imageLoader").className="button3";
+        document.getElementById("btns").className="hint2";
+    }
 
     function myFunction2()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         ctx.translate(img.width, img.height);
         ctx.rotate(Math.PI);
         ctx.drawImage(img, ulx,uly, img.width, img.height);
     }
     function myFunction3()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         ctx.translate(img.width, 0);
         ctx.scale(-1, 1);
         ctx.drawImage(img, ulx,uly, img.width, img.height);
     }
     function myFunction5()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var xs=document.getElementById("myText1").value;
         var ys=document.getElementById("myText2").value;
         ctx.clearRect(ulx, uly, canvas.width, canvas.height);
@@ -22,6 +38,9 @@
 
     function myFunction7()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var imageData=ctx.getImageData(0,0,img.width,img.height);
         var data=imageData.data;
         for(i=0;i<data.length;i+=4)
@@ -34,6 +53,9 @@
     }
     function myFunction8()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var imageData=ctx.getImageData(0,0,img.width,img.height);
         var data=imageData.data;
         for(i=0;i<data.length;i+=4)
@@ -47,6 +69,9 @@
     }
     function myFunction31()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var imageData=ctx.getImageData(0,0,img.width,img.height);
         var data=imageData.data;
         for(i=0;i<data.length;i+=4)
@@ -60,6 +85,9 @@
     }
     function myFunction9()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var imageData=ctx.getImageData(0,0,img.width,img.height);
         var data=imageData.data;
         for(i=0;i<data.length;i+=4)
@@ -68,6 +96,9 @@
     }
     function myFunction10()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var imageData=ctx.getImageData(0,0,img.width,img.height);
         var data=imageData.data;
         for(i=0;i<data.length;i+=4)
@@ -79,6 +110,9 @@
     }
     function myFunction11()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var imageData=ctx.getImageData(0,0,img.width,img.height);
         var data=imageData.data;
         for(i=0;i<data.length;i+=4)
@@ -90,6 +124,9 @@
     }
     function myFunction12()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var imageData=ctx.getImageData(0,0,img.width,img.height);
         var data=imageData.data;
         for(i=0;i<data.length;i+=4)
@@ -101,10 +138,16 @@
     }
     function myFunction13()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         ctx.clearRect(0, 0, canvas.width, canvas.height);  
     }
     function myFunction14()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var imageData=ctx.getImageData(0,0,img.width,img.height);
         var data=imageData.data;
         var adjustment=20;
@@ -118,6 +161,9 @@
     }
     function myFunction15()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var imageData=ctx.getImageData(0,0,img.width,img.height);
         var data=imageData.data;
         var threshold=150;
@@ -133,6 +179,9 @@
     }
     function myFunction16()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[0, -1/3,  0, -1/3,  7/3, -1/3, 0, -1/3,  0];
         var op=0.5;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -181,6 +230,9 @@
     }
     function myFunction17()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9 ];
         var op=0.5;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -229,6 +281,9 @@
     }
     function myFunction18()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1, 1, 1, 1, 0.7, -1, -1, -1, -1];
         var op=0.5;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -277,6 +332,9 @@
     }
     function myFunction19()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var rwgt=0.3086, gwgt=0.6094, bwgt=0.0820;
         var weights=[rwgt,rwgt,rwgt,0,gwgt,gwgt,gwgt,0,bwgt,bwgt,bwgt,0,0,0,0,1];
         var op=0.5;
@@ -326,6 +384,9 @@
     }
     function myFunction20()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[0, 0, 0, 0, 6/9, 0, 0, 0, 0];
         var op=0.5;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -374,6 +435,9 @@
     }
     function myFunction21()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[0, 1, 0, 1, -4, 1, 0, 1, 0];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -422,6 +486,9 @@
     }
     function myFunction22()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[-2, -1, 0, -1, 1, 1, 0, 1, 2];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -470,6 +537,9 @@
     }
     function myFunction23()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1/16, 2/16, 1/16, 2/16, 4/16, 2/16, 1/16, 2/16, 1/16];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -518,6 +588,9 @@
     }
     function myFunction24()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1/9, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 1/9, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 1/9, 0, 0, 0, 0, 0, 0,
@@ -574,6 +647,9 @@
     }
     function myFunction25()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1, 1, 1,1, -7, 1,1,  1,  1];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -622,6 +698,9 @@
     }
     function myFunction26()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[-1, -1, -1, -1,  8, -1,-1, -1, -1];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -670,6 +749,9 @@
     }
     function myFunction27()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[0, -1/6,  0, -1/6, 10/6, -1/6, 0, -1/6,  0];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -718,6 +800,9 @@
     }
     function myFunction28()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1/13, 1/13, 1/13, 1/13, 5/13, 1/13, 1/13,  1/13, 1/13];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -766,6 +851,9 @@
     }
     function myFunction29()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[-1, 0, 1, -2, 0, 2, -1, 0 ,1];
         var weights1=[-1, -2, -1, 0, 0, 0, 1, 2, 1];
         var op=1;
@@ -821,6 +909,9 @@
     }
     function myFunction30()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1, 1, 1, 1,1, 1, 1,  1, 1];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -869,6 +960,9 @@
     }
     function myFunction32()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1, 1, 1, 1,1, 1, 1,  1, 1];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -920,6 +1014,9 @@
     }
     function myFunction33()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1, 1, 1, 1,1, 1, 1,  1, 1];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -971,6 +1068,9 @@
     }
     function myFunction34()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1/9, 1/9, 1/9, 1/9,1/9, 1/9, 1/9,  1/9, 1/9];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -1019,6 +1119,9 @@
     }
     function myFunction35()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1/9, 1/9, 1/9, 1/9,1/9, 1/9, 1/9,  1/9, 1/9];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -1067,6 +1170,9 @@
     }
     function myFunction36()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1/9, 1/9, 1/9, 1/9,1/9, 1/9, 1/9,  1/9, 1/9];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -1115,6 +1221,9 @@
     }
     function myFunction37()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1/9, 1/9, 1/9, 1/9,1/9, 1/9, 1/9,  1/9, 1/9];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
@@ -1165,6 +1274,9 @@
     }
     function myFunction38()
     {
+        click++;
+        if(click==1)
+            document.getElementById("btns").className="btns";
         var weights=[1/9, 1/9, 1/9, 1/9,1/9, 1/9, 1/9,  1/9, 1/9];
         var op=1;
         var imageData=ctx.getImageData(0,0,img.width,img.height);
