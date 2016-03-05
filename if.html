@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Fredericka+the+Great|Fontdiner+Swanky|Freckle+Face|Finger+Paint|Cabin+Sketch|Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./if.css">
+  <title>Basic Image Processing</title>
+     <script>
+   $(document).ready(function(){
+   var header = $('header');
+   var mutato;
+   mutato=0;
+   var backgrounds = new Array(
+    'url(../images/header-background4.jpg)'
+   , 'url(../images/header-background.jpg)'
+   , 'url(../images/header-background2.jpg)'
+   , 'url(../images/header-background3.jpg)'
+   );
+    function kepcsere()
+    {
+        $('header').animate({opacity: 0}, 'slow', function() {
+            $(this).css({
+                'background-image': backgrounds[mutato]
+            }).animate({opacity: 1}, 'fast');
+        });
+        mutato++;
+        if (mutato>=backgrounds.length)
+        {
+            mutato=0;
+        }
+
+        setTimeout(function(){kepcsere()},8000);
+    }
+    kepcsere();
+   });
+   </script>
+   </head>
+   <body>
+    <script src="if.js" type="text/javascript"></script>
+    <div id="sitebody">
+    <div id="header">
+    <h1><i class="fa fa-camera"></i> I*F--Image Processing & Filters APP</h1>
+    <label>Upload Image File:</label><br/>
+    <input class="button3" type="file" id="imageLoader" name="imageLoader"/><br>
+    <div class="btns">
+    <button class="button" onclick="myFunction2()">Flip Upside-Down</button>
+    <button class="button" onclick="myFunction3()">Flip Horizontal</button>
+    <button class="button" onclick="myFunction7()">Invert Color</button>
+    <button class="button" onclick="myFunction8()">Grayscale</button>
+    <button class="button" onclick="myFunction9()">Transparent</button>
+    <button class="button" onclick="myFunction10()">Red</button>
+    <button class="button" onclick="myFunction11()">Blue</button>
+    <button class="button" onclick="myFunction12()">Green</button>
+    <button class="button" onclick="myFunction14()">Brightness</button>
+    <button class="button" onclick="myFunction20()">Darken</button>
+    <button class="button" onclick="myFunction16()">Sharpen</button>
+    <button class="button" onclick="myFunction17()">Blur</button>
+    <button class="button" onclick="myFunction23()">Gaussian Blur</button>
+    <button class="button" onclick="myFunction24()">Motion Blur</button>
+    <button class="button" onclick="myFunction21()">Edge</button>
+    <button class="button" onclick="myFunction25()">Edge2</button>
+    <button class="button" onclick="myFunction26()">Contour</button>
+    <button class="button" onclick="myFunction22()">Emboss</button>
+    <button class="button" onclick="myFunction27()">Detail</button>
+    <button class="button" onclick="myFunction28()">Smooth</button>
+    <button class="button" onclick="myFunction29()">Sobel</button>
+    <button class="button" onclick="myFunction18()">Carve</button>
+    <button class="button" onclick="myFunction19()">Luminance</button>
+    <button class="button" onclick="myFunction15()">Threshold</button>
+    <button class="button" onclick="myFunction31()">Vintage</button>
+    <button class="button" onclick="myFunction32()">Erosion</button>
+    <button class="button" onclick="myFunction33()">Dilate</button>
+    <button class="button" onclick="myFunction34()">Red <i class="fa fa-arrows-h"></i> Green</button>
+    <button class="button" onclick="myFunction35()">Red <i class="fa fa-arrows-h"></i> Blue</button>
+    <button class="button" onclick="myFunction36()">Green <i class="fa fa-arrows-h"></i> Blue</button>
+    <button class="button" onclick="myFunction37()">Diffusion</button>
+    <button class="button" onclick="myFunction38()">Comic</button>
+    </div>
+    <a class="button3" href="./if.html">Clear</a>
+    </div>
+    <div id="sidebar_left">
+    <div>
+    <canvas id="zoom" width="200" height="200"></canvas><br>
+    <label for="smoothbtn">
+    <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn">
+    Enable Smoothing
+    </label>
+    </div>
+    </div>
+    <div id="sidebar_right"></div>
+    <div id="content"><canvas width="1000px" height="1000px" id="canvas"></canvas></div>
+    <div id="footer"></div>
+    </div>
+    <script>
+    var imageLoader = document.getElementById('imageLoader');
+    imageLoader.addEventListener('change', handleImage, false);
+    var canvas=document.getElementById('canvas');
+    var ctx=canvas.getContext('2d');
+    var img;
+    var ulx=0;
+    var uly=0;
+    function handleImage(e)
+    {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ulx=0;
+        uly=0;
+        var reader = new FileReader();
+        reader.onload = function(event)
+        {
+            img = new Image();
+            img.onload = function()
+            {    canvas.width=img.width*1000/img.width;
+                 canvas.height=img.height*1000/img.width;                              
+                 ctx.drawImage(img,0,0,img.width*1000/img.width,img.height*1000/img.width);
+                 img.width=canvas.width;
+                 img.height=canvas.height;
+            }
+            img.src = event.target.result;
+        }
+        reader.readAsDataURL(e.target.files[0]);     
+    }
+    myFunction6();
+    function myFunction6()
+    {
+        var zoomctx = document.getElementById('zoom').getContext('2d'); 
+        var smoothbtn = document.getElementById('smoothbtn');
+        var toggleSmoothing = function(event)
+        {
+            zoomctx.imageSmoothingEnabled = this.checked;
+            zoomctx.mozImageSmoothingEnabled = this.checked;
+            zoomctx.webkitImageSmoothingEnabled = this.checked;
+            zoomctx.msImageSmoothingEnabled = this.checked;
+        };
+        smoothbtn.addEventListener('change', toggleSmoothing);
+        var zoom = function(event)
+        {
+            var x = event.layerX;
+            var y = event.layerY;
+            zoomctx.drawImage(canvas,
+            Math.abs(x - 5),
+            Math.abs(y - 5),
+            10, 10,
+            0, 0,
+            200, 200);
+        };
+        canvas.addEventListener('mousemove', zoom);
+    }
+    </script>
+  </body>
+</html> 
