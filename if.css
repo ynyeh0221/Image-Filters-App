@@ -26,7 +26,6 @@
 #sidebar_left{
  width:280px;
  height:1000px;
- padding: 0px;
  text-align:center;
  line-height:40px;
  float:left;
@@ -45,6 +44,7 @@
  height:1000px;
  text-align:center;
  line-height:40px;
+ background-color:rgba(255,255,255,0.5);
 }
 #footer{
  clear:both;
