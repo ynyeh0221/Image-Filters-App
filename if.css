@@ -85,6 +85,53 @@
     color: white;
     font-weight: bold;
   }
+ .hint2{
+      width: 1300px;
+      box-shadow: 1px 1px 15px #ffffff, 1px 1px 5px #ffffff, 1px 1px 10px #ffffff, 1px 1px 15px #ffffff inset;
+  }
+  .hint2 > .button{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight:bold;
+    width: 150px;
+    height: 48px;
+    padding-left, padding-right: 30px;
+    margin-right:2px;
+    background-color: #ef989b;
+    border: 0px solid #ffffff;
+    color: #6d6875;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    box-shadow: 1px 1px 25px #ffffff, 1px 1px 5px #ffffff, 1px 1px 10px #ffffff, 1px 1px 15px #ffffff inset;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .hint2 > .button:hover {
+    background-color: #b5838d;
+    color: white;
+    font-weight: bold;
+  }
+
+  .hint{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    background-color: #6d6875; /* Green */
+    border: 0px solid #2b2d42;
+    color: #ffffff;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 1px 1px 25px #ffffff, 1px 1px 5px #ffffff, 1px 1px 10px #ffffff, 1px 1px 15px #ffffff inset;
+  }
   .button3{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
