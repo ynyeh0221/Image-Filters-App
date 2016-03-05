@@ -1,3 +1,3 @@
 # Image-Filters-App
 
-Demo: http://ynyeh0221.er-webs.com/Image_filters_app.html
+Demo: http://ujkk99f4a664.julianayyeh.koding.io/if.html
